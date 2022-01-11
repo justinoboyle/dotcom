@@ -6,7 +6,7 @@ module.exports = {
       {
         source: "/",
         // temporary until I make something here
-        destination: "https://www.linkedin.com/in/justinoboyle",
+        destination: "https://www.github.com/justinoboyle",
         permanent: false,
       },
     ];
