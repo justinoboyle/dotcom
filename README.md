@@ -39,6 +39,15 @@ linters) before every commit; it activates automatically on `npm install`
   `turbopack.root` (a stray parent-directory `package-lock.json` would
   otherwise confuse Turbopack's root detection).
 
+## Agent readiness
+
+The site follows the [AgentReady](https://agentready.org/) standard so AI
+agents can find and read it: an open `robots.txt` (one rule for all agents),
+a `sitemap.xml`, a `llms.txt`, JSON-LD structured data on the page, and
+server-rendered HTML with real status codes. The repository itself carries
+agent skills in `.agents/skills/` (Next.js, React, composition, Vercel) and
+guidance in `AGENTS.md`.
+
 ## Deployment
 
 Pushes deploy automatically on Vercel; `main` is the production branch.

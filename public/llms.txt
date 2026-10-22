@@ -1,0 +1,13 @@
+# Justin O'Boyle
+
+> Personal website of Justin O'Boyle. The site is currently a placeholder:
+> the root path temporarily redirects to GitHub until the real site is built
+> here.
+
+## Links
+
+- [Home](/): redirects to GitHub for now; the placeholder page underneath is
+  a work in progress.
+- [GitHub](https://github.com/justinoboyle): where the work lives today.
+- [This repository](https://github.com/justinoboyle/dotcom): source for this
+  site.
