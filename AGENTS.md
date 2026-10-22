@@ -19,11 +19,12 @@ locally, temporarily remove the redirect in `next.config.ts`.
 
 ## Reference docs
 
-Version-matched Next.js 16.4.2 documentation is bundled locally at
-`node_modules/next/dist/docs/` (entry point: `docs/llms.txt`). Prefer it over
-remembered API details, since much of what applies to older Next.js versions
-changed in 15 and 16. If the directory is missing, any npm install restores
-it, or run `npx @next/codemod agents-md`.
+Version-matched Next.js documentation is bundled locally at
+`node_modules/next/dist/docs/` (entry point: `docs/llms.txt`) — it always
+matches the installed `next` version, so prefer it over remembered API
+details, since much of what applies to older Next.js versions changed in 15
+and 16. `next dev` also writes and updates its own managed agent-rules block
+in this file; commit it when it appears so the tree stays clean.
 
 ## Conventions and constraints
 
