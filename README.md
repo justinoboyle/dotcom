@@ -1,11 +1,6 @@
 <!-- Coding agents: read AGENTS.md. -->
 
-# dotcom
-
-Source for [justinoboyle.com](https://justinoboyle.com), Justin O'Boyle's
-personal site. Currently `/` redirects to
-[GitHub](https://github.com/justinoboyle) (see `redirects()` in
-`next.config.ts`).
+Source for [justinoboyle.com](https://justinoboyle.com).
 
 ## Development
 
