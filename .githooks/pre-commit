@@ -1,0 +1,4 @@
+#!/bin/sh
+# Pre-commit hook: run the linters before allowing a commit.
+# Activated via `core.hooksPath` (see the `prepare` script in package.json).
+npm run lint
