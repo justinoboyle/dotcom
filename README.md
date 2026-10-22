@@ -14,16 +14,21 @@ dependencies stay deliberately small until the site needs more.
 
 ## Scripts
 
-| Command         | Purpose                                  |
-| --------------- | ---------------------------------------- |
-| `npm run dev`   | Dev server                               |
-| `npm run build` | Production build                         |
-| `npm start`     | Serve the production build               |
-| `npm run lint`  | oxlint (strict) then ESLint flat config  |
+| Command            | Purpose                                 |
+| ------------------ | --------------------------------------- |
+| `npm run dev`      | Dev server                              |
+| `npm run build`    | Production build                        |
+| `npm start`        | Serve the production build              |
+| `npm run format`   | Format with oxfmt                       |
+| `npm run lint`     | Format check, then oxlint, then ESLint  |
 | `npm run lint:fix` | Apply automatic fixes from both linters |
 
 Because `/` redirects in every environment, preview the placeholder page by
 temporarily removing the redirect in `next.config.ts` while developing.
+
+A pre-commit hook in `.githooks/` runs `npm run lint` (format check plus both
+linters) before every commit; it activates automatically on `npm install`
+(via the `prepare` script, no extra dependencies).
 
 ## Configuration
 
@@ -43,5 +48,8 @@ Pushes deploy automatically on Vercel; `main` is the production branch.
     src/app/          App Router pages, layout, global styles
     public/           Static assets
     next.config.ts    Redirects and Turbopack options
-    eslint.config.mjs ESLint flat config
+    .oxlintrc.json    oxlint config (strict)
+    .oxfmtrc.json     oxfmt formatter config
+    eslint.config.mjs ESLint flat config (Next rules oxlint hasn't ported)
+    .githooks/        Git hooks (pre-commit lint gate)
     AGENTS.md         Notes for coding agents working in this repo

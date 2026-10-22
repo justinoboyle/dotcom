@@ -45,9 +45,5 @@
       }
     }
   ],
-  "ignorePatterns": [
-    "node_modules",
-    ".next",
-    "next-env.d.ts"
-  ]
+  "ignorePatterns": ["node_modules", ".next", "next-env.d.ts"]
 }

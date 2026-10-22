@@ -12,9 +12,15 @@ codebase is a foundation, not a legacy app.
 - `npm run dev` — dev server (Turbopack)
 - `npm run build` — production build
 - `npm start` — serve the production build
-- `npm run lint` — oxlint (strict, `.oxlintrc.json`) then ESLint
-  (flat config in `eslint.config.mjs`)
+- `npm run format` — format with oxfmt
+- `npm run lint` — oxfmt format check, then oxlint (strict,
+  `.oxlintrc.json`), then ESLint (flat config in `eslint.config.mjs`,
+  covering Next rules oxlint hasn't ported; `eslint-plugin-oxlint` disables
+  overlapping rules)
 - `npm run lint:fix` — automatic fixes from both linters
+
+A pre-commit hook (`.githooks/pre-commit`, activated via `core.hooksPath` by
+the `prepare` script) runs `npm run lint` before every commit.
 
 Note: `/` redirects in every environment. To view the placeholder page
 locally, temporarily remove the redirect in `next.config.ts`.
@@ -51,4 +57,3 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
-
