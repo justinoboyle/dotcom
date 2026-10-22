@@ -12,7 +12,9 @@ codebase is a foundation, not a legacy app.
 - `npm run dev` — dev server (Turbopack)
 - `npm run build` — production build
 - `npm start` — serve the production build
-- `npm run lint` — ESLint (flat config in `eslint.config.mjs`)
+- `npm run lint` — oxlint (strict, `.oxlintrc.json`) then ESLint
+  (flat config in `eslint.config.mjs`)
+- `npm run lint:fix` — automatic fixes from both linters
 
 Note: `/` redirects in every environment. To view the placeholder page
 locally, temporarily remove the redirect in `next.config.ts`.
@@ -39,3 +41,14 @@ in this file; commit it when it appears so the tree stays clean.
 - Metadata lives in `src/app/layout.tsx` with a title template;
   `NEXT_PUBLIC_SITE_URL` (see `.env.example`) drives `metadataBase` in
   production.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+
