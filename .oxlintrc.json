@@ -1,0 +1,53 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "react",
+    "react-perf",
+    "nextjs",
+    "import",
+    "jsx-a11y",
+    "promise",
+    "node",
+    "unicorn",
+    "oxc"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "perf": "warn",
+    "pedantic": "warn",
+    "style": "off",
+    "restriction": "off",
+    "nursery": "off"
+  },
+  "rules": {
+    "typescript/no-explicit-any": "error",
+    "typescript/consistent-type-imports": "error",
+    "typescript/no-namespace": "error",
+    "react/exhaustive-deps": "error",
+    "react/rules-of-hooks": "error",
+    "react/jsx-key": "error",
+    "import/no-cycle": "error",
+    "import/no-duplicates": "error",
+    "import/no-self-import": "error",
+    "oxc/missing-throw": "error",
+    // Next.js idioms: automatic JSX runtime and side-effect CSS imports.
+    "react/react-in-jsx-scope": "off",
+    "import/no-unassigned-import": "off"
+  },
+  "overrides": [
+    {
+      // Next.js requires config functions like `redirects()` to be async.
+      "files": ["next.config.ts"],
+      "rules": {
+        "require-await": "off"
+      }
+    }
+  ],
+  "ignorePatterns": [
+    "node_modules",
+    ".next",
+    "next-env.d.ts"
+  ]
+}

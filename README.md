@@ -19,7 +19,8 @@ dependencies stay deliberately small until the site needs more.
 | `npm run dev`   | Dev server                               |
 | `npm run build` | Production build                         |
 | `npm start`     | Serve the production build               |
-| `npm run lint`  | ESLint (flat config)                     |
+| `npm run lint`  | oxlint (strict) then ESLint flat config  |
+| `npm run lint:fix` | Apply automatic fixes from both linters |
 
 Because `/` redirects in every environment, preview the placeholder page by
 temporarily removing the redirect in `next.config.ts` while developing.
