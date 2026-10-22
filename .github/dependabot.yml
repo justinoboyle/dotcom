@@ -11,5 +11,12 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    # TypeScript majors break the lint toolchain: eslint-config-next bundles
+    # typescript-eslint, which rejects TS 7 at import (ceiling <6.1.0).
+    # Lift this once typescript-eslint supports TypeScript 7.
+    ignore:
+      - dependency-name: typescript
+        update-types:
+          - "version-update:semver-major"
     commit-message:
       prefix: "deps"
