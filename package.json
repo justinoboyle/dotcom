@@ -12,18 +12,18 @@
     "prepare": "git config core.hooksPath .githooks"
   },
   "dependencies": {
-    "next": "16.4.2",
+    "next": "16.4.4",
     "react": "19.3.1",
     "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
-    "eslint": "^10.13.0",
-    "eslint-config-next": "16.4.2",
-    "eslint-plugin-oxlint": "^1.89.0",
-    "oxfmt": "^0.74.0",
+    "eslint": "^10.14.0",
+    "eslint-config-next": "16.4.4",
+    "eslint-plugin-oxlint": "^1.90.0",
+    "oxfmt": "^0.75.0",
     "oxlint": "^1.89.0",
     "typescript": "^6.0.3"
   }
